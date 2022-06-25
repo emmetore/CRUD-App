@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setlist Creator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+</head>
+
+<body class="container">
+    <h1 class="title"><center>SETLIST CREATOR</center></h1>
+    
+    <hr>
+    <div class="set-list-form">
+        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+            <div>
+                <label>Song Name*</label><label class="validation-error hide" id="songNameValidationError">This field is
+                    required.</label>
+                <input class="input-box" type="text" id="songName">
+            </div>
+            <div>
+                <label>Key</label>
+                <input class="input-box" type="text" id="key">
+            </div>
+            <div>
+                <label>Length</label>
+                <input class="input-box" type="text" id="length">
+            </div>
+            <div class="form-action-buttons btn-primary">
+                <center><button type="submit" value="Submit">Create</button></center>
+            </div>
+        </form>
+    </div>
+    <br />
+    <div class="setlist">
+        <table class="list" id="setlist">
+            <thead>
+                <tr>
+                    <th>Song Name</th>
+                    <th>Key</th>
+                    <th>Length</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="script.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+
+</body>
+
+</html>
